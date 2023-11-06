@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #ffff;
+}
+
+/*-----------------------------------------------------------------------*/
+
+.headers {
+  width: 100%;
+}
+
+.header-container {
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  min-height: 10px;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 10px 5%;
+  z-index: 2;
+}
+
+header:hover {
+  cursor: pointer;
+}
+
+header.sticky {
+  padding: 10px 20px;
+  background-color: #000000;
+  .icon {
+    height: 40px;
+    width: 100px;
+    content: url("clcwhite.png");
+  }
+  .slogan {
+    width: 250px;
+    height: 38px;
+    content: url("sloganwhite.png");
+  }
+  /* .quote {
+    font-size: 1em;
+    color: white;
+  } */
+}
+
+header .icon {
+  max-height: 100px;
+  max-width: 100px;
+  position: relative;
+  transition: 0.6s;
+}
+
+/* header .quote {
+  position: relative;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+} */
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  transition: 0.6s;
+}
+
+.slogan {
+  position: relative;
+  width: 400px;
+  height: 75px;
+  transition: 0.6s;
+  object-fit: scale-down;
+}
+
+@media only screen and (max-width: 480px) {
+  .slogan {
+    width: 60%;
+    height: 36%;
+  }
+
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 100px;
+  }
+}
+
+/*-----------------------------------------------------------------------*/
+
+@keyframes slide {
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 20px 0;
+  background: #f0f0f0;
+  white-space: nowrap;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 10s slide infinite linear;
+}
+
+.brand-logos {
+  height: 80px;
+  margin: 0 40px;
+  transition: 0.2s;
+}
+
+/* ul */
+/* .headerLogos {
+  list-style: none;
+
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f2f2f2;
+} */
+
+/*li -> img*/
+/* .brand-logos {
+  height: 75px;
+  width: 75px;
+} */
+
+/*div*/
+/* .logos {
+  display: table;
+  margin: 0 auto;
+  width: 100%;
+} */
+
+/*------------------------------------------------------------------------*/
+
+.contacts-header {
+  width: 100%;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.contacts-header h1 {
+  font-family: Helvetica, Arial;
+  color: #353333;
+  padding: 25px;
+}
+
+.contacts-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.contacts {
+  width: 30%;
+  border: 2px solid #000;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 25px;
+  transition: 0.6s;
+}
+
+.contacts:hover {
+  background-color: #b8b8b8;
+  cursor: pointer;
+  transition: 0.01s;
+}
+
+.contacts:active {
+  box-shadow: 0 0px #2c2c2c;
+  background-color: #5f5f5f;
+  transform: translateY(4px);
+}
+
+.contacts .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts .top .contact-icon {
+  width: 50px;
+}
+
+.contacts .top .texts h3{
+  font-family:'Helvetica';
+}
+
+.contacts .top .texts p{
+  font-family: Roboto, sans-serif;
+}
+
+.contacts .bottom {
+  width: 100%;
+  text-align: center;
+}
+
+.contacts .bottom h3 {
+  font-family: Andale Mono, monospace;
+  color: #000;
+  transition: 0.6s;
+}
+
+.contacts .bottom a {
+  text-decoration: none;
+}
